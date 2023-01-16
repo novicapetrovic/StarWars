@@ -10,7 +10,6 @@
 		51E4923929758FA70031F8D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E4923829758FA70031F8D7 /* AppDelegate.swift */; };
 		51E4923B29758FA70031F8D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E4923A29758FA70031F8D7 /* SceneDelegate.swift */; };
 		51E4923D29758FA70031F8D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E4923C29758FA70031F8D7 /* ViewController.swift */; };
-		51E4924029758FA70031F8D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51E4923E29758FA70031F8D7 /* Main.storyboard */; };
 		51E4924229758FA80031F8D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51E4924129758FA80031F8D7 /* Assets.xcassets */; };
 		51E4924529758FA80031F8D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51E4924329758FA80031F8D7 /* LaunchScreen.storyboard */; };
 		51E4925029758FA80031F8D7 /* StarWarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E4924F29758FA80031F8D7 /* StarWarsTests.swift */; };
@@ -40,7 +39,6 @@
 		51E4923829758FA70031F8D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51E4923A29758FA70031F8D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		51E4923C29758FA70031F8D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		51E4923F29758FA70031F8D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		51E4924129758FA80031F8D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51E4924429758FA80031F8D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		51E4924629758FA80031F8D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 				51E4923829758FA70031F8D7 /* AppDelegate.swift */,
 				51E4923A29758FA70031F8D7 /* SceneDelegate.swift */,
 				51E4923C29758FA70031F8D7 /* ViewController.swift */,
-				51E4923E29758FA70031F8D7 /* Main.storyboard */,
 				51E4924129758FA80031F8D7 /* Assets.xcassets */,
 				51E4924329758FA80031F8D7 /* LaunchScreen.storyboard */,
 				51E4924629758FA80031F8D7 /* Info.plist */,
@@ -233,7 +230,6 @@
 			files = (
 				51E4924529758FA80031F8D7 /* LaunchScreen.storyboard in Resources */,
 				51E4924229758FA80031F8D7 /* Assets.xcassets in Resources */,
-				51E4924029758FA70031F8D7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +293,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		51E4923E29758FA70031F8D7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				51E4923F29758FA70031F8D7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		51E4924329758FA80031F8D7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,7 +430,6 @@
 				INFOPLIST_FILE = StarWars/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,7 +457,6 @@
 				INFOPLIST_FILE = StarWars/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
