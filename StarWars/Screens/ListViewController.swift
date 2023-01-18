@@ -7,21 +7,15 @@
 
 import UIKit
 
-class ListViewController: UIViewController {
-    
-    enum Section { case main }
+final class ListViewController: UIViewController {
     
     // MARK: - Properties
-    var filmsList = [FilmModel]()
-    var characterList = [CharacterModel]()
-    var characterDict = [String: String]()
-    var filteredFilmList = [FilmModel]()
-    var isSearching = false
+    private var filmsList = [FilmModel]()
+    private var characterList = [CharacterModel]()
+    private var characterDict = [String: String]()
+    private var filteredFilmList = [FilmModel]()
     
-    var collectionView: UICollectionView!
-    var tableView: UITableView!
-    var dataSource: UICollectionViewDiffableDataSource<Section, FilmModel>!
-    var searchController: UISearchController!
+    private var tableView: UITableView!
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -51,7 +45,6 @@ private extension ListViewController {
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
-//                self.updateData(on: self.filmsList)
                 return
 
             case .failure(let error):
@@ -85,14 +78,13 @@ private extension ListViewController {
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: FilmTableViewCell.reuseId)
+        tableView.register(FilmTableViewCell.self, forCellReuseIdentifier: FilmTableViewCell.reuseId)
     }
     
     private func createCharacterDictionary() {
         for character in characterList {
             characterDict[character.url] = character.name
         }
-        print("DEBUG: characterDict = \(characterDict)")
     }
 
     private func convertCharacterUrlsToNames(for film: FilmModel) -> [String] {

@@ -13,3 +13,13 @@ extension UIView {
         for view in views { addSubview(view) }
     }
 }
+
+// Pull to refresh
+// Test coverage
+// Documentation
+// Project structure refactor/cleanup
+// MVC, MVVM
+// Detail viewcontroller having tableview
+// Stretch character detail
+// Add launch screen
+// Refactor networking to async/await

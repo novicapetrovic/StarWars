@@ -11,7 +11,8 @@ final class DetailViewController: UIViewController {
     
     // MARK: - Properties
     private let headerView = UIView()
-    private var characters = [String]()
+    
+    private let characters: [String]
     
     // MARK: - Init
     init(characters: [String]) {

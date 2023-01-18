@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct CharacterListModel: Codable {
+struct CharacterListModel: Decodable {
     let results: [CharacterModel]
 }

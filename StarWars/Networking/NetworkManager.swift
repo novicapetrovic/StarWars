@@ -12,12 +12,15 @@ enum APIError: Error {
     case decodingProblem
 }
 
+enum Path: String {
+    case films = "/films"
+    case people = "/people"
+}
+
 final class NetworkManager {
     
     // MARK: - Properties
     static let shared = NetworkManager()
-    let cache = NSCache<NSString, UIImage>()
-    
     private let baseURL = "https://swapi.dev/api/"
     
     // MARK: - Private Init to avoid multiple instances
@@ -26,7 +29,7 @@ final class NetworkManager {
     // MARK: - Public Interface
     func fetchFilmList(completion: @escaping(Result<FilmListModel, APIError>) -> Void) {
         
-        guard let url = URL(string: baseURL + "/films") else {
+        guard let url = endpoint(for: .films) else {
             return
         }
         
@@ -57,7 +60,7 @@ final class NetworkManager {
     
     func fetchCharacterList(completion: @escaping(Result<CharacterListModel, APIError>) -> Void) {
         
-        guard let resourceURL = URL(string: baseURL + "/people/") else {
+        guard let resourceURL = endpoint(for: .people) else {
             return
         }
         
@@ -84,5 +87,9 @@ final class NetworkManager {
             }
             dataTask.resume()
         }
+    }
+
+    func endpoint(for path: Path) -> URL? {
+        return URL(string: baseURL + path.rawValue)
     }
 }

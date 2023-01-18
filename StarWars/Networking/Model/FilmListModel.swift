@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct FilmListModel: Codable {
+struct FilmListModel: Decodable {
     let results: [FilmModel]
 }

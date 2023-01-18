@@ -22,7 +22,6 @@
 		51E4925C29758FA80031F8D7 /* StarWarsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E4925B29758FA80031F8D7 /* StarWarsUITestsLaunchTests.swift */; };
 		51E4926C2975987B0031F8D7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E4926B2975987B0031F8D7 /* NetworkManager.swift */; };
 		51E4926F297599130031F8D7 /* FilmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E4926E297599130031F8D7 /* FilmModel.swift */; };
-		51E4927229759AB20031F8D7 /* FilmCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E4927129759AB20031F8D7 /* FilmCollectionViewCell.swift */; };
 		51E4927429759B920031F8D7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E4927329759B920031F8D7 /* DetailViewController.swift */; };
 		51E4927B2975B3840031F8D7 /* BUTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E4927A2975B3840031F8D7 /* BUTitleLabel.swift */; };
 		51E4927E2975B4190031F8D7 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E4927D2975B4190031F8D7 /* UIView+Ext.swift */; };
@@ -31,7 +30,6 @@
 		51E492862975B4910031F8D7 /* BUAlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E492852975B4910031F8D7 /* BUAlertContainerView.swift */; };
 		51E492892975B4CE0031F8D7 /* BUButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E492882975B4CE0031F8D7 /* BUButton.swift */; };
 		51E4928B2975B4EB0031F8D7 /* BUBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E4928A2975B4EB0031F8D7 /* BUBodyLabel.swift */; };
-		51E4928F2975B7AC0031F8D7 /* BUImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E4928E2975B7AC0031F8D7 /* BUImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +69,6 @@
 		51E4925B29758FA80031F8D7 /* StarWarsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		51E4926B2975987B0031F8D7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		51E4926E297599130031F8D7 /* FilmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmModel.swift; sourceTree = "<group>"; };
-		51E4927129759AB20031F8D7 /* FilmCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmCollectionViewCell.swift; sourceTree = "<group>"; };
 		51E4927329759B920031F8D7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		51E4927A2975B3840031F8D7 /* BUTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BUTitleLabel.swift; sourceTree = "<group>"; };
 		51E4927D2975B4190031F8D7 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
@@ -80,7 +77,6 @@
 		51E492852975B4910031F8D7 /* BUAlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BUAlertContainerView.swift; sourceTree = "<group>"; };
 		51E492882975B4CE0031F8D7 /* BUButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BUButton.swift; sourceTree = "<group>"; };
 		51E4928A2975B4EB0031F8D7 /* BUBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BUBodyLabel.swift; sourceTree = "<group>"; };
-		51E4928E2975B7AC0031F8D7 /* BUImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BUImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,7 +209,6 @@
 		51E492782975B35B0031F8D7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				51E4927129759AB20031F8D7 /* FilmCollectionViewCell.swift */,
 				51237BBC2976D5AD00D49B2F /* FilmTableViewCell.swift */,
 			);
 			path = Cells;
@@ -250,7 +245,6 @@
 			isa = PBXGroup;
 			children = (
 				51E492852975B4910031F8D7 /* BUAlertContainerView.swift */,
-				51E4928E2975B7AC0031F8D7 /* BUImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -400,7 +394,6 @@
 				51E4923929758FA70031F8D7 /* AppDelegate.swift in Sources */,
 				51E492832975B4620031F8D7 /* BUAlertViewController.swift in Sources */,
 				51E4928B2975B4EB0031F8D7 /* BUBodyLabel.swift in Sources */,
-				51E4927229759AB20031F8D7 /* FilmCollectionViewCell.swift in Sources */,
 				51237BBD2976D5AD00D49B2F /* FilmTableViewCell.swift in Sources */,
 				51E492892975B4CE0031F8D7 /* BUButton.swift in Sources */,
 				51E492862975B4910031F8D7 /* BUAlertContainerView.swift in Sources */,
@@ -409,7 +402,6 @@
 				51B27A08297889600069CDBA /* CharacterModel.swift in Sources */,
 				51E4927E2975B4190031F8D7 /* UIView+Ext.swift in Sources */,
 				51E4926F297599130031F8D7 /* FilmModel.swift in Sources */,
-				51E4928F2975B7AC0031F8D7 /* BUImageView.swift in Sources */,
 				51237BBB2976CB4E00D49B2F /* CharacterListModel.swift in Sources */,
 				51E4927B2975B3840031F8D7 /* BUTitleLabel.swift in Sources */,
 				51E4927429759B920031F8D7 /* DetailViewController.swift in Sources */,
@@ -586,8 +578,9 @@
 				INFOPLIST_FILE = StarWars/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -595,6 +588,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = novicapetrovic.StarWars;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -613,8 +609,9 @@
 				INFOPLIST_FILE = StarWars/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -622,6 +619,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = novicapetrovic.StarWars;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -56,6 +56,7 @@ final class BUAlertViewController: UIViewController {
     func configureTitleLabel() {
         titleLabel.text = alertTitle ?? "Something went wrong"
         
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: padding),
             titleLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: padding),
@@ -68,6 +69,7 @@ final class BUAlertViewController: UIViewController {
         ctaButton.setTitle(buttonTitle ?? "Ok", for: .normal)
         ctaButton.addTarget(self, action: #selector(dismissAlert), for: .touchUpInside)
         
+        ctaButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             ctaButton.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -padding),
             ctaButton.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: padding),
@@ -84,6 +86,7 @@ final class BUAlertViewController: UIViewController {
         messageLabel.text = message ?? "Unable to complete request"
         messageLabel.numberOfLines = 4
         
+        messageLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
             messageLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: padding),
