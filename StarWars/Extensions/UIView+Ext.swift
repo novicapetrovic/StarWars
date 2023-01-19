@@ -13,10 +13,3 @@ extension UIView {
         for view in views { addSubview(view) }
     }
 }
-
-// Pull to refresh
-// Test coverage
-// Documentation
-// Project structure refactor/cleanup
-// MVC, MVVM
-// Stretch character detail

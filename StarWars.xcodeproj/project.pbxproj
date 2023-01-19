@@ -10,10 +10,10 @@
 		5114EA6C2979774C000768E0 /* UIActivityIndicatorView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5114EA6B2979774C000768E0 /* UIActivityIndicatorView+Ext.swift */; };
 		51237BB72975D39800D49B2F /* FilmListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51237BB62975D39800D49B2F /* FilmListModel.swift */; };
 		51237BBB2976CB4E00D49B2F /* CharacterListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51237BBA2976CB4E00D49B2F /* CharacterListModel.swift */; };
-		51237BBD2976D5AD00D49B2F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51237BBC2976D5AD00D49B2F /* TableViewCell.swift */; };
 		51B27A08297889600069CDBA /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B27A07297889600069CDBA /* CharacterModel.swift */; };
 		51DDC8B32979A19F00B647E9 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DDC8B22979A19F00B647E9 /* Errors.swift */; };
 		51DDC8B52979A79100B647E9 /* BUDataLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DDC8B42979A79100B647E9 /* BUDataLoadingViewController.swift */; };
+		51DDC8B92979E2D700B647E9 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DDC8B62979E1B600B647E9 /* MockNetworkManager.swift */; };
 		51E4923929758FA70031F8D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E4923829758FA70031F8D7 /* AppDelegate.swift */; };
 		51E4923B29758FA70031F8D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E4923A29758FA70031F8D7 /* SceneDelegate.swift */; };
 		51E4923D29758FA70031F8D7 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E4923C29758FA70031F8D7 /* ListViewController.swift */; };
@@ -55,10 +55,10 @@
 		5114EA6B2979774C000768E0 /* UIActivityIndicatorView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView+Ext.swift"; sourceTree = "<group>"; };
 		51237BB62975D39800D49B2F /* FilmListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmListModel.swift; sourceTree = "<group>"; };
 		51237BBA2976CB4E00D49B2F /* CharacterListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListModel.swift; sourceTree = "<group>"; };
-		51237BBC2976D5AD00D49B2F /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		51B27A07297889600069CDBA /* CharacterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
 		51DDC8B22979A19F00B647E9 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		51DDC8B42979A79100B647E9 /* BUDataLoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BUDataLoadingViewController.swift; sourceTree = "<group>"; };
+		51DDC8B62979E1B600B647E9 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
 		51E4923529758FA70031F8D7 /* StarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51E4923829758FA70031F8D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51E4923A29758FA70031F8D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				51E4924F29758FA80031F8D7 /* StarWarsTests.swift */,
+				51DDC8B62979E1B600B647E9 /* MockNetworkManager.swift */,
 			);
 			path = StarWarsTests;
 			sourceTree = "<group>";
@@ -213,18 +214,9 @@
 				51E492812975B4500031F8D7 /* ViewControllers */,
 				51E492842975B4800031F8D7 /* Views */,
 				51E492792975B3620031F8D7 /* Labels */,
-				51E492782975B35B0031F8D7 /* Cells */,
 				51E492872975B4BD0031F8D7 /* Buttons */,
 			);
 			path = CustomViews;
-			sourceTree = "<group>";
-		};
-		51E492782975B35B0031F8D7 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				51237BBC2976D5AD00D49B2F /* TableViewCell.swift */,
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		51E492792975B3620031F8D7 /* Labels */ = {
@@ -408,7 +400,6 @@
 				51E4923929758FA70031F8D7 /* AppDelegate.swift in Sources */,
 				51E492832975B4620031F8D7 /* BUAlertViewController.swift in Sources */,
 				51E4928B2975B4EB0031F8D7 /* BUBodyLabel.swift in Sources */,
-				51237BBD2976D5AD00D49B2F /* TableViewCell.swift in Sources */,
 				5114EA6C2979774C000768E0 /* UIActivityIndicatorView+Ext.swift in Sources */,
 				51DDC8B52979A79100B647E9 /* BUDataLoadingViewController.swift in Sources */,
 				51E492892975B4CE0031F8D7 /* BUButton.swift in Sources */,
@@ -428,6 +419,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51DDC8B92979E2D700B647E9 /* MockNetworkManager.swift in Sources */,
 				51E4925029758FA80031F8D7 /* StarWarsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,8 +17,13 @@ enum Path: String {
     case people = "/people"
 }
 
-final class NetworkManager {
-    
+protocol NetworkManagerProtocol {
+    func fetchFilmList() async throws -> FilmListModel
+    func fetchCharacterList() async throws -> CharacterListModel
+}
+
+final class NetworkManager: NetworkManagerProtocol {
+
     // MARK: - Properties
     static let shared = NetworkManager()
     private let baseURL = "https://swapi.dev/api/"

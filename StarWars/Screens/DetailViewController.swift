@@ -39,6 +39,7 @@ final class DetailViewController: UIViewController {
     private func configureNavBar() {
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonTapped))
         navigationItem.rightBarButtonItem = doneButton
+        title = "Characters"
     }
     
     private func configureTableView() {
@@ -46,7 +47,7 @@ final class DetailViewController: UIViewController {
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(TableViewCell.self, forCellReuseIdentifier: TableViewCell.reuseId)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: .detailTableViewCellReuseIdentifier)
         tableView.separatorStyle = .none
     }
     
@@ -64,7 +65,7 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.reuseId, for: indexPath as IndexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: .detailTableViewCellReuseIdentifier, for: indexPath as IndexPath)
         cell.textLabel?.text = characters[indexPath.row]
         return cell
     }
@@ -73,4 +74,8 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
         presentAlert(title: "Feature not implemented", message: "We haven't got that far yet!", buttonTitle: "Ok")
         tableView.deselectRow(at: indexPath, animated: true)
     }
+}
+
+private extension String {
+    static let detailTableViewCellReuseIdentifier = "detailReusableIdentifier"
 }

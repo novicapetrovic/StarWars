@@ -10,6 +10,7 @@ import UIKit
 final class ListViewController: BUDataLoadingVC {
     
     // MARK: - Properties
+    var networkManager: NetworkManagerProtocol
     var filmsList = [FilmModel]()
     var characterList = [CharacterModel]()
     var characterDict = [String: String]()
@@ -29,6 +30,15 @@ final class ListViewController: BUDataLoadingVC {
         configureRefreshControl()
         fetchFilms()
         fetchCharacters()
+    }
+    
+    init(networkManager: NetworkManagerProtocol) {
+        self.networkManager = networkManager
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
 
@@ -54,6 +64,7 @@ extension ListViewController {
                 }
                 dismissLoadingView()
             }
+            refreshControl.endRefreshing()
         }
     }
     
@@ -79,7 +90,7 @@ extension ListViewController {
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(TableViewCell.self, forCellReuseIdentifier: TableViewCell.reuseId)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: .listTableViewCellReuseIdentifier)
         tableView.separatorStyle = .none
     }
     
@@ -98,7 +109,7 @@ extension ListViewController {
     }
     
     @objc private func refresh(_ sender: AnyObject) {
-        // TODO
+        fetchFilms()
     }
     
     func createCharacterDictionary(for characterList: [CharacterModel]) {
@@ -125,7 +136,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.reuseId, for: indexPath as IndexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: .listTableViewCellReuseIdentifier, for: indexPath as IndexPath)
         cell.textLabel?.text = filmsList[indexPath.row].title
         return cell
     }
@@ -142,4 +153,8 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }
+}
+
+private extension String {
+    static let listTableViewCellReuseIdentifier = "listReusableIdentifier"
 }

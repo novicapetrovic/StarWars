@@ -11,10 +11,12 @@ import XCTest
 final class StarWarsTests: XCTestCase {
     
     var listViewController: ListViewController!
+    var detailViewController: DetailViewController!
 
     override func setUp() {
         super.setUp()
-        listViewController = ListViewController()
+        listViewController = ListViewController(networkManager: MockNetworkManager())
+        detailViewController = DetailViewController(characters: [])
     }
     
     func testListViewController() {
@@ -29,6 +31,11 @@ final class StarWarsTests: XCTestCase {
         XCTAssertEqual(listViewController.characterDict[characterList[1].url], characterList[1].name)
         XCTAssertEqual(listViewController.characterDict[characterList[2].url], characterList[2].name)
         XCTAssertEqual(listViewController.characterDict[characterList[3].url], characterList[3].name)
+    }
+    
+    func testDetailViewController() {
+        detailViewController.loadViewIfNeeded()
+        XCTAssertEqual(detailViewController.title, "Characters")
     }
 }
 
