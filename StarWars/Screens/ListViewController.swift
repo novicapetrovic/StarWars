@@ -57,7 +57,7 @@ extension ListViewController {
                 tableView.reloadData()
                 dismissLoadingView()
             } catch {
-                if let buError = error as? BUError {
+                if let buError = error as? NetworkError {
                     presentAlert(title: "Something went wrong", message: buError.localizedDescription, buttonTitle: "Ok")
                 } else {
                     presentDefaultAlert()
@@ -76,7 +76,7 @@ extension ListViewController {
                 createCharacterDictionary(for: characterList)
                 charactersLoaded = true
             } catch {
-                if let buError = error as? BUError {
+                if let buError = error as? NetworkError {
                     presentAlert(title: "Something went wrong", message: buError.localizedDescription, buttonTitle: "Ok")
                 } else {
                     presentDefaultAlert()

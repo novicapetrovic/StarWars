@@ -35,37 +35,37 @@ final class NetworkManager: NetworkManagerProtocol {
     // MARK: - Public Interface
     func fetchFilmList() async throws -> FilmListModel {
         guard let url = endpoint(for: .films) else {
-            throw BUError.invalidUrl
+            throw NetworkError.invalidUrl
         }
         
         let (data, response) = try await URLSession.shared.data(from: url)
         
         guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-            throw BUError.invalidResponse
+            throw NetworkError.invalidResponse
         }
         
         do {
             return try decoder.decode(FilmListModel.self, from: data)
         } catch {
-            throw BUError.invalidData
+            throw NetworkError.invalidData
         }
     }
     
     func fetchCharacterList() async throws -> CharacterListModel {
         guard let url = endpoint(for: .people) else {
-            throw BUError.invalidUrl
+            throw NetworkError.invalidUrl
         }
         
         let (data, response) = try await URLSession.shared.data(from: url)
         
         guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-            throw BUError.invalidResponse
+            throw NetworkError.invalidResponse
         }
         
         do {
             return try decoder.decode(CharacterListModel.self, from: data)
         } catch {
-            throw BUError.invalidData
+            throw NetworkError.invalidData
         }
     }
 
