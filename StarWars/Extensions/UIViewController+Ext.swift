@@ -9,12 +9,17 @@ import UIKit
 
 extension UIViewController {
     
-    func presentAlertOnMainThread(title: String, message: String, buttonTitle: String) {
-        DispatchQueue.main.async {
-            let alertVC = BUAlertViewController(title: title, message: message, buttonTitle: buttonTitle)
-            alertVC.modalPresentationStyle = .overFullScreen
-            alertVC.modalTransitionStyle = .crossDissolve
-            self.present(alertVC, animated: true)
-        }
+    func presentAlert(title: String, message: String, buttonTitle: String) {
+        let alertVC = BUAlertViewController(title: title, message: message, buttonTitle: buttonTitle)
+        alertVC.modalPresentationStyle = .overFullScreen
+        alertVC.modalTransitionStyle = .crossDissolve
+        present(alertVC, animated: true)
+    }
+    
+    func presentDefaultAlert() {
+        let alertVC = BUAlertViewController(title: "Something went wrong", message: "We were unable to complet your task at this time. Please try again.", buttonTitle: "Ok")
+        alertVC.modalPresentationStyle = .overFullScreen
+        alertVC.modalTransitionStyle = .crossDissolve
+        present(alertVC, animated: true)
     }
 }

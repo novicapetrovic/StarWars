@@ -49,12 +49,13 @@ final class BUAlertViewController: UIViewController {
             containerView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             containerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             containerView.widthAnchor.constraint(equalToConstant: 280),
-            containerView.heightAnchor.constraint(equalToConstant: 220)
+            containerView.heightAnchor.constraint(greaterThanOrEqualToConstant: 220)
         ])
     }
     
     func configureTitleLabel() {
         titleLabel.text = alertTitle ?? "Something went wrong"
+        titleLabel.numberOfLines = 0
         
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([

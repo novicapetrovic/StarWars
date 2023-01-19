@@ -10,7 +10,7 @@ import UIKit
 final class DetailViewController: UIViewController {
     
     // MARK: - Properties
-    private let headerView = UIView()
+    private var tableView: UITableView!
     
     private let characters: [String]
     
@@ -27,33 +27,27 @@ final class DetailViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavBar()
-        setupUI()
+        configureNavBar()
+        configureTableView()
     }
     
     // MARK: - Helpers
-    private func setupNavBar() {
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonTapped))
-        navigationItem.rightBarButtonItem = doneButton
-    }
-    
     @objc func doneButtonTapped() {
         dismiss(animated: true)
     }
     
-    private func setupUI() {
-        view.backgroundColor = .white
-        view.addSubview(headerView)
-        headerView.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            headerView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            headerView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            headerView.heightAnchor.constraint(equalToConstant: 200)
-        ])
-        
-        self.add(childVC: DetailHeaderView(characters: characters), to: self.headerView)
+    private func configureNavBar() {
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonTapped))
+        navigationItem.rightBarButtonItem = doneButton
+    }
+    
+    private func configureTableView() {
+        tableView = UITableView(frame: view.bounds)
+        view.addSubview(tableView)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(TableViewCell.self, forCellReuseIdentifier: TableViewCell.reuseId)
+        tableView.separatorStyle = .none
     }
     
     func add(childVC: UIViewController, to containerView: UIView) {
@@ -61,5 +55,22 @@ final class DetailViewController: UIViewController {
         containerView.addSubview(childVC.view)
         childVC.view.frame = containerView.bounds
         childVC.didMove(toParent: self)
+    }
+}
+
+extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return characters.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.reuseId, for: indexPath as IndexPath)
+        cell.textLabel?.text = characters[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presentAlert(title: "Feature not implemented", message: "We haven't got that far yet!", buttonTitle: "Ok")
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

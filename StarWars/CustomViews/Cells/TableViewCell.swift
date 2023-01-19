@@ -7,10 +7,10 @@
 
 import UIKit
 
-final class FilmTableViewCell: UITableViewCell {
+final class TableViewCell: UITableViewCell {
     
     // MARK: - Properties
-    static let reuseId = "FilmTableViewCell"
+    static let reuseId = "TableViewCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()

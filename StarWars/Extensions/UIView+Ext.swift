@@ -19,7 +19,4 @@ extension UIView {
 // Documentation
 // Project structure refactor/cleanup
 // MVC, MVVM
-// Detail viewcontroller having tableview
 // Stretch character detail
-// Add launch screen
-// Refactor networking to async/await

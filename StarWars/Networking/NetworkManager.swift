@@ -22,70 +22,45 @@ final class NetworkManager {
     // MARK: - Properties
     static let shared = NetworkManager()
     private let baseURL = "https://swapi.dev/api/"
+    let decoder = JSONDecoder()
     
     // MARK: - Private Init to avoid multiple instances
     private init() { }
     
     // MARK: - Public Interface
-    func fetchFilmList(completion: @escaping(Result<FilmListModel, APIError>) -> Void) {
-        
+    func fetchFilmList() async throws -> FilmListModel {
         guard let url = endpoint(for: .films) else {
-            return
+            throw BUError.invalidUrl
+        }
+        
+        let (data, response) = try await URLSession.shared.data(from: url)
+        
+        guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+            throw BUError.invalidResponse
         }
         
         do {
-            var urlRequest = URLRequest(url: url)
-            urlRequest.httpMethod = "GET"
-            
-            let dataTask = URLSession.shared.dataTask(with: urlRequest) { data, response , _ in
-                guard let httpResponse = response as? HTTPURLResponse else {
-                    completion(.failure(.responseProblem))
-                    return
-                }
-                
-                guard httpResponse.statusCode == 200, let jsonData = data else {
-                    return
-                }
-                
-                do {
-                    let decodedData = try JSONDecoder().decode(FilmListModel.self, from: jsonData)
-                    completion(.success(decodedData))
-                } catch {
-                    completion(.failure(.decodingProblem))
-                }
-            }
-            dataTask.resume()
+            return try decoder.decode(FilmListModel.self, from: data)
+        } catch {
+            throw BUError.invalidData
         }
     }
     
-    func fetchCharacterList(completion: @escaping(Result<CharacterListModel, APIError>) -> Void) {
+    func fetchCharacterList() async throws -> CharacterListModel {
+        guard let url = endpoint(for: .people) else {
+            throw BUError.invalidUrl
+        }
         
-        guard let resourceURL = endpoint(for: .people) else {
-            return
+        let (data, response) = try await URLSession.shared.data(from: url)
+        
+        guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+            throw BUError.invalidResponse
         }
         
         do {
-            var urlRequest = URLRequest(url: resourceURL)
-            urlRequest.httpMethod = "GET"
-
-            let dataTask = URLSession.shared.dataTask(with: urlRequest) { data, response , _ in
-                guard let httpResponse = response as? HTTPURLResponse else {
-                    completion(.failure(.responseProblem))
-                    return
-                }
-                
-                guard httpResponse.statusCode == 200, let jsonData = data else {
-                    return
-                }
-                
-                do {
-                    let decodedData = try JSONDecoder().decode(CharacterListModel.self, from: jsonData)
-                    completion(.success(decodedData))
-                } catch {
-                    completion(.failure(.decodingProblem))
-                }
-            }
-            dataTask.resume()
+            return try decoder.decode(CharacterListModel.self, from: data)
+        } catch {
+            throw BUError.invalidData
         }
     }
 

@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5114EA6C2979774C000768E0 /* UIActivityIndicatorView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5114EA6B2979774C000768E0 /* UIActivityIndicatorView+Ext.swift */; };
 		51237BB72975D39800D49B2F /* FilmListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51237BB62975D39800D49B2F /* FilmListModel.swift */; };
 		51237BBB2976CB4E00D49B2F /* CharacterListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51237BBA2976CB4E00D49B2F /* CharacterListModel.swift */; };
-		51237BBD2976D5AD00D49B2F /* FilmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51237BBC2976D5AD00D49B2F /* FilmTableViewCell.swift */; };
-		51B27A06297889520069CDBA /* DetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B27A05297889510069CDBA /* DetailHeaderView.swift */; };
+		51237BBD2976D5AD00D49B2F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51237BBC2976D5AD00D49B2F /* TableViewCell.swift */; };
 		51B27A08297889600069CDBA /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B27A07297889600069CDBA /* CharacterModel.swift */; };
+		51DDC8B32979A19F00B647E9 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DDC8B22979A19F00B647E9 /* Errors.swift */; };
+		51DDC8B52979A79100B647E9 /* BUDataLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DDC8B42979A79100B647E9 /* BUDataLoadingViewController.swift */; };
 		51E4923929758FA70031F8D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E4923829758FA70031F8D7 /* AppDelegate.swift */; };
 		51E4923B29758FA70031F8D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E4923A29758FA70031F8D7 /* SceneDelegate.swift */; };
 		51E4923D29758FA70031F8D7 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E4923C29758FA70031F8D7 /* ListViewController.swift */; };
@@ -50,11 +52,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5114EA6B2979774C000768E0 /* UIActivityIndicatorView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView+Ext.swift"; sourceTree = "<group>"; };
 		51237BB62975D39800D49B2F /* FilmListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmListModel.swift; sourceTree = "<group>"; };
 		51237BBA2976CB4E00D49B2F /* CharacterListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListModel.swift; sourceTree = "<group>"; };
-		51237BBC2976D5AD00D49B2F /* FilmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmTableViewCell.swift; sourceTree = "<group>"; };
-		51B27A05297889510069CDBA /* DetailHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailHeaderView.swift; sourceTree = "<group>"; };
+		51237BBC2976D5AD00D49B2F /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		51B27A07297889600069CDBA /* CharacterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
+		51DDC8B22979A19F00B647E9 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		51DDC8B42979A79100B647E9 /* BUDataLoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BUDataLoadingViewController.swift; sourceTree = "<group>"; };
 		51E4923529758FA70031F8D7 /* StarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51E4923829758FA70031F8D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51E4923A29758FA70031F8D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +108,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51DDC8B12979A19300B647E9 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				51DDC8B22979A19F00B647E9 /* Errors.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		51E4922C29758FA70031F8D7 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				51E4927C2975B40C0031F8D7 /* Extensions */,
+				51DDC8B12979A19300B647E9 /* Utilities */,
 				51E4926A2975986D0031F8D7 /* Networking */,
 				51E4927029759AA30031F8D7 /* CustomViews */,
 				51E49269297597EC0031F8D7 /* Screens */,
@@ -209,7 +222,7 @@
 		51E492782975B35B0031F8D7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				51237BBC2976D5AD00D49B2F /* FilmTableViewCell.swift */,
+				51237BBC2976D5AD00D49B2F /* TableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -228,6 +241,7 @@
 			children = (
 				51E4927D2975B4190031F8D7 /* UIView+Ext.swift */,
 				51E4927F2975B4370031F8D7 /* UIViewController+Ext.swift */,
+				5114EA6B2979774C000768E0 /* UIActivityIndicatorView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -236,7 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				51E492822975B4620031F8D7 /* BUAlertViewController.swift */,
-				51B27A05297889510069CDBA /* DetailHeaderView.swift */,
+				51DDC8B42979A79100B647E9 /* BUDataLoadingViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -394,14 +408,16 @@
 				51E4923929758FA70031F8D7 /* AppDelegate.swift in Sources */,
 				51E492832975B4620031F8D7 /* BUAlertViewController.swift in Sources */,
 				51E4928B2975B4EB0031F8D7 /* BUBodyLabel.swift in Sources */,
-				51237BBD2976D5AD00D49B2F /* FilmTableViewCell.swift in Sources */,
+				51237BBD2976D5AD00D49B2F /* TableViewCell.swift in Sources */,
+				5114EA6C2979774C000768E0 /* UIActivityIndicatorView+Ext.swift in Sources */,
+				51DDC8B52979A79100B647E9 /* BUDataLoadingViewController.swift in Sources */,
 				51E492892975B4CE0031F8D7 /* BUButton.swift in Sources */,
 				51E492862975B4910031F8D7 /* BUAlertContainerView.swift in Sources */,
-				51B27A06297889520069CDBA /* DetailHeaderView.swift in Sources */,
 				51E4923B29758FA70031F8D7 /* SceneDelegate.swift in Sources */,
 				51B27A08297889600069CDBA /* CharacterModel.swift in Sources */,
 				51E4927E2975B4190031F8D7 /* UIView+Ext.swift in Sources */,
 				51E4926F297599130031F8D7 /* FilmModel.swift in Sources */,
+				51DDC8B32979A19F00B647E9 /* Errors.swift in Sources */,
 				51237BBB2976CB4E00D49B2F /* CharacterListModel.swift in Sources */,
 				51E4927B2975B3840031F8D7 /* BUTitleLabel.swift in Sources */,
 				51E4927429759B920031F8D7 /* DetailViewController.swift in Sources */,
